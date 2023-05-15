@@ -8,16 +8,43 @@
  */
 
 /*** 02. Theorie: Array */
-let arr;
-// arr = new Array(); // Konstruktor
-arr = []; // Literal
-arr = [2,7,11,4];
+// let arr;
+// // arr = new Array(); // Konstruktor
+// arr = []; // Literal
+// arr = [2,7,11,4];
 
 // output(arr);
 // output(arr.length); // Anzahl der Elemente
 // output(arr[0]); // Index 0 (1. Pos. im Array)
 // output(arr[3]); // letzte Position / konkret
 // output(arr[arr.length - 1]); // letzte Position / allgemein
+
+/* 02a. Theorie: Schleifen (for-schleife) */
+
+/* For -Schleifen als allg. Wiederholungs-Struktur */
+
+// Inkrement (untere Grenze --> obere Grenze)
+// for (let i = 0; i < 10; i++) {
+//     output(i);    
+// }
+
+// // Dekrement (obere Grenze --> untere Grenze)
+// for (let i = 10; i > 0 ; i++) {
+//     output(i);
+// }
+
+// Inkrement (var. Schrittweite)
+// for (let i = 50; i < 100 ; i+=5) {
+//     output(i);
+// }
+
+/* 02b. For-Schleife für Array-Index (Iteration)*/
+let arr = ["Ich","bin","die","coole","Maxine","Mützerich"];
+for (let i = 0; i < arr.length; i++) {
+    output(i); // Innerer Index
+    output(arr[i]); // Array- Index --> Mapping
+}
+
 
 
 
@@ -52,7 +79,7 @@ function getSentence(word1,word2,word3,word4,word5,word6) {
 // word1,word2, .... wordN :: Semantische Struktur
 // arr[0],arr[1] ... arr[n-1] :: Numerische Struktur (0,1,2,3 ... n-1)
 // --> Transformation semantisches Problem --> numerisches Problem
-output(getSentenceArr(["Ich","bin","die","coole","Maxine","Mützerich"]));
+// output(getSentenceArr(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr(arr) {
     const GAP = " ";
     const PUNCT = ".";
