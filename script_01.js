@@ -78,12 +78,11 @@ hier: Aufsummierung
 Solange die Variable existiert, bleibt dieser erhalten
 hier: Verkettung eines Strings // Transponierung
 */
-let str = ""; // Anfangswert
-for (let i = 0; i < 4; i++) {
-    str += "Test";
-    output("inhalt von str: " + str);
-}
-
+// let str = ""; // Anfangswert
+// for (let i = 0; i < 4; i++) {
+//     str += "Test";
+//     output("inhalt von str: " + str);
+// }
 
 
 
@@ -136,20 +135,34 @@ function getSentenceArr(arr) {
 /*** 01b. Funktionalität mit Array 2  */
 // Transponierung:  untereinander ---> nebeneinander
 // Helge Schneider: Anananandereihung ...
-// output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
+output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr2(arr) {
     const GAP = " ";
     const PUNCT = ".";
-    // let str =  
+    let str = ""; // Anfangswert
 
-    for (let i = 0; i < arr.length; i++) {
-    output(arr[i]); // Array- Index --> Mapping
-}
+    // 2. Iteration
 
+    for (let i = 0; i < arr.length; i++) { // 0 --> arr.length - 1
+        str += arr[i] + GAP; // Letzte GAP zuviel
+    }
 
-    // return str;
-}
+    return str.trim() + PUNCT; // wegschneiden durch trim(), also beim letzten Wort angekommen, setzt er PUNCT
+// }
 
+    // 3. Iteration
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (i == arr.length-1) {
+    //         str += arr[i] + PUNCT;
+    //     }else {
+    //         str += arr[i] + GAP;
+    //     }
+        
+    // 4. Iteration join()
+    // return arr.join(GAP) + PUNCT;
+        
+    }
 
 
 
